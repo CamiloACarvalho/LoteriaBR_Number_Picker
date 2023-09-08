@@ -1,4 +1,13 @@
+const limparNumeros = () => {
+    const container = document.getElementById('container-numbers');
+    // Remove todos os elementos filhos do container
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+};
+
 const lotofacil = () => {
+    limparNumeros();
     const lotofacil = new Set ();
     const container = document.getElementById('container-numbers');
     while(lotofacil.size < 15){
@@ -18,6 +27,7 @@ const lotofacil = () => {
 };
 
 const megaSena = () => {
+    limparNumeros();
     const container = document.getElementById('container-numbers'); // Add os números criados dentro do HTML
     const megaSena = new Set (); // Serve para não ter número repetidos
     while(megaSena.size < 6){
@@ -37,6 +47,7 @@ const megaSena = () => {
 };
 
 const quina = () => {
+    limparNumeros();
     const container = document.getElementById('container-numbers');
     const quina = new Set ();
     while(quina.size < 5){
@@ -56,6 +67,7 @@ const quina = () => {
 };
 
 const lotomania = () => {
+    limparNumeros();
     const container = document.getElementById('container-numbers');
     const lotomania = new Set ();
     while(lotomania.size < 50){
@@ -75,6 +87,7 @@ const lotomania = () => {
 };
 
 const timemania = () => {
+    limparNumeros();
     const container = document.getElementById('container-numbers');
     const timemania = new Set ();
     while(timemania.size < 10){
@@ -94,6 +107,7 @@ const timemania = () => {
 };
 
 const duplaSena = () => {
+    limparNumeros();
     const container = document.getElementById('container-numbers');
     const duplaSena = new Set ();
     while(duplaSena.size < 6){
@@ -113,6 +127,7 @@ const duplaSena = () => {
 };
 
 const superSete = () => {
+    limparNumeros();
     const container = document.getElementById('container-numbers');
     const superSeteArray = [];
     for(let index = 0; index < 7; index +=1 ) {
@@ -133,6 +148,7 @@ const superSete = () => {
 };
 
 const diaSorte = () => {
+    limparNumeros();
     const container = document.getElementById('container-numbers');
     const diaSorte= new Set ();
     while(diaSorte.size < 7){
