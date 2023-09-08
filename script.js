@@ -11,7 +11,7 @@ const lotofacil = () => {
     });
     for (let index = 0; index < lotofacilArray.length; index += 1){
         const num = document.createElement('div');
-        num.id = 'lotofacilNum';
+        num.className = 'lotofacilNum';
         num.innerText = lotofacilArray[index];
         container.appendChild(num);
     }
@@ -30,7 +30,7 @@ const megaSena = () => {
     });
     for (let index = 0; index < megaSenaArray.length; index += 1){ //Esse for foi criado para pegar todos os números ordenados do array e criar um elemento com eles dentro de forma ordenada para aparecer na tela do usuário
         const num = document.createElement('div');
-        num.id = 'megaSenaNum';
+        num.className = 'megaSenaNum';
         num.innerText = megaSenaArray[index];
         container.appendChild(num);
     }
@@ -49,7 +49,7 @@ const quina = () => {
     });
     for (let index = 0; index < quinaArray.length; index += 1){
         const num = document.createElement('div');
-        num.id = 'quinaNum';
+        num.className = 'quinaNum';
         num.innerText = quinaArray[index];
         container.appendChild(num);
     }
@@ -68,7 +68,7 @@ const lotomania = () => {
     });
     for (let index = 0; index < lotomaniaArray.length; index += 1){
         const num = document.createElement('div');
-        num.id = 'lotomaniaNum';
+        num.className = 'lotomaniaNum';
         num.innerText = lotomaniaArray[index];
         container.appendChild(num);
     }
@@ -87,7 +87,7 @@ const timemania = () => {
     });
     for (let index = 0; index < timemaniaArray.length; index += 1){
         const num = document.createElement('div');
-        num.id = 'timemaniaNum';
+        num.className = 'timemaniaNum';
         num.innerText = timemaniaArray[index];
         container.appendChild(num);
     }
@@ -98,7 +98,7 @@ const duplaSena = () => {
     const duplaSena = new Set ();
     while(duplaSena.size < 6){
         const randomNumber = Math.floor(Math.random() * 50) + 1;
-        megaSena.add(randomNumber);
+        duplaSena.add(randomNumber);
     }
     const duplaSenaArray = Array.from(duplaSena);
     duplaSenaArray.sort(function (a, b) {
@@ -106,7 +106,7 @@ const duplaSena = () => {
     });
     for (let index = 0; index < duplaSenaArray.length; index += 1){
         const num = document.createElement('div');
-        num.id = 'duplaSenaNum';
+        num.className = 'duplaSenaNum';
         num.innerText = duplaSenaArray[index];
         container.appendChild(num);
     }
@@ -139,16 +139,24 @@ const diaSorte = () => {
         const randomNumber = Math.floor(Math.random() * 31) + 1;
         diaSorte.add(randomNumber);
     }
-    const diaSorteArray = Array.from(duplaSena);
+    const diaSorteArray = Array.from(diaSorte);
     diaSorteArray.sort(function (a, b) {
       return a - b;
     });
     for (let index = 0; index < diaSorteArray.length; index += 1){
-        const num = document.createElement('div');
-        num.id = 'diaSorteNum';
-        num.innerText = diaSorteArray[index];
-        container.appendChild(num);
+        const div = document.createElement('div');
+        div.className = 'diaSorteNum';
+        const day = document.createElement('span');
+        day.className = 'day';
+        day.innerText = diaSorteArray[index];
+        div.appendChild(day);
+        container.appendChild(div);
     }
+    const mes = document.createElement('span');
+    const random = Math.floor(Math.random() * 12) + 1;
+    mes.className = 'mes';
+    mes.innerText = `O mês da sorte: ${random}`;
+    container.appendChild(mes);
 };
 
 window.onload = () => {
