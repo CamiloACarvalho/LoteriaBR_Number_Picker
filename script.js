@@ -1,5 +1,6 @@
 const lotofacil = () => {
     const lotofacil = new Set ();
+    const container = document.getElementById('container-numbers');
     while(lotofacil.size < 15){
         const randomNumber = Math.floor(Math.random() * 25) + 1;
         lotofacil.add(randomNumber);
@@ -8,7 +9,12 @@ const lotofacil = () => {
     lotofacilArray.sort(function (a, b) {
       return a - b;
     });
-    return lotofacilArray;
+    for (let index = 0; index < lotofacilArray.length; index += 1){
+        const num = document.createElement('div');
+        num.id = 'lotofacilNum';
+        num.innerText = lotofacil[index];
+        container.appendChild(num);
+    }
 };
 
 const megaSena = () => {
@@ -99,5 +105,6 @@ const superSete = () => {
 };
 
 window.onload = () => {
-    
+    const btnLotofacil = document.getElementById('lotofacil');
+    btnLotofacil.addEventListener('click', )
 };
