@@ -12,12 +12,13 @@ const lotofacil = () => {
     for (let index = 0; index < lotofacilArray.length; index += 1){
         const num = document.createElement('div');
         num.id = 'lotofacilNum';
-        num.innerText = lotofacil[index];
+        num.innerText = lotofacilArray[index];
         container.appendChild(num);
     }
 };
 
 const megaSena = () => {
+    const container = document.getElementById('container-numbers'); // Add os números criados dentro do HTML
     const megaSena = new Set (); // Serve para não ter número repetidos
     while(megaSena.size < 6){
         const randomNumber = Math.floor(Math.random() * 60) + 1;
@@ -27,11 +28,16 @@ const megaSena = () => {
     megaSenaArray.sort(function (a, b) { // Utilizada para ordenar do menor para o maior
       return a - b;
     });
-  
-    return megaSenaArray; // Retornar o array ordenado
+    for (let index = 0; index < megaSenaArray.length; index += 1){ //Esse for foi criado para pegar todos os números ordenados do array e criar um elemento com eles dentro de forma ordenada para aparecer na tela do usuário
+        const num = document.createElement('div');
+        num.id = 'megaSenaNum';
+        num.innerText = megaSenaArray[index];
+        container.appendChild(num);
+    }
 };
 
 const quina = () => {
+    const container = document.getElementById('container-numbers');
     const quina = new Set ();
     while(quina.size < 5){
         const randomNumber = Math.floor(Math.random() * 80) + 1;
@@ -41,11 +47,16 @@ const quina = () => {
     quinaArray.sort(function (a, b) {
       return a - b;
     });
-  
-    return quinaArray;
+    for (let index = 0; index < quinaArray.length; index += 1){
+        const num = document.createElement('div');
+        num.id = 'quinaNum';
+        num.innerText = quinaArray[index];
+        container.appendChild(num);
+    }
 };
 
 const lotomania = () => {
+    const container = document.getElementById('container-numbers');
     const lotomania = new Set ();
     while(lotomania.size < 50){
         const randomNumber = Math.floor(Math.random() * 99);
@@ -55,11 +66,16 @@ const lotomania = () => {
     lotomaniaArray.sort(function (a, b) {
       return a - b;
     });
-  
-    return lotomaniaArray;
+    for (let index = 0; index < lotomaniaArray.length; index += 1){
+        const num = document.createElement('div');
+        num.id = 'lotomaniaNum';
+        num.innerText = lotomaniaArray[index];
+        container.appendChild(num);
+    }
 };
 
 const timemania = () => {
+    const container = document.getElementById('container-numbers');
     const timemania = new Set ();
     while(timemania.size < 10){
         const randomNumber = Math.floor(Math.random() * 80) +1;
@@ -69,11 +85,16 @@ const timemania = () => {
     timemaniaArray.sort(function (a, b) {
       return a - b;
     });
-  
-    return timemaniaArray;
+    for (let index = 0; index < timemaniaArray.length; index += 1){
+        const num = document.createElement('div');
+        num.id = 'timemaniaNum';
+        num.innerText = timemaniaArray[index];
+        container.appendChild(num);
+    }
 };
 
 const duplaSena = () => {
+    const container = document.getElementById('container-numbers');
     const duplaSena = new Set ();
     while(duplaSena.size < 6){
         const randomNumber = Math.floor(Math.random() * 50) + 1;
@@ -83,13 +104,20 @@ const duplaSena = () => {
     duplaSenaArray.sort(function (a, b) {
       return a - b;
     });
-  
-    return duplaSenaArray;
+    for (let index = 0; index < duplaSenaArray.length; index += 1){
+        const num = document.createElement('div');
+        num.id = 'duplaSenaNum';
+        num.innerText = duplaSenaArray[index];
+        container.appendChild(num);
+    }
 };
 
 const superSete = () => {
+    const container = document.getElementById('container-numbers');
     const superSeteArray = [];
     for(let index = 0; index < 7; index +=1 ) {
+        const num = document.createElement('div');
+        num.id = `superSeteNum${index}`;
         const superSete= new Set ();
         while(superSete.size < 7){
             const randomNumber = Math.floor(Math.random() * 10);
@@ -99,12 +127,52 @@ const superSete = () => {
         superSeteArray[index].sort(function (a, b) {
           return a - b;
         });
-        superSeteArray.push(superSeteArray)
+        num.innerText = superSeteArray[index];
+        container.appendChild(num);   
     }
-    return superSeteArray
+};
+
+const diaSorte = () => {
+    const container = document.getElementById('container-numbers');
+    const diaSorte= new Set ();
+    while(diaSorte.size < 7){
+        const randomNumber = Math.floor(Math.random() * 31) + 1;
+        diaSorte.add(randomNumber);
+    }
+    const diaSorteArray = Array.from(duplaSena);
+    diaSorteArray.sort(function (a, b) {
+      return a - b;
+    });
+    for (let index = 0; index < diaSorteArray.length; index += 1){
+        const num = document.createElement('div');
+        num.id = 'diaSorteNum';
+        num.innerText = diaSorteArray[index];
+        container.appendChild(num);
+    }
 };
 
 window.onload = () => {
     const btnLotofacil = document.getElementById('lotofacil');
-    btnLotofacil.addEventListener('click', )
+    btnLotofacil.addEventListener('click', lotofacil);
+
+    const btnMegaSena = document.getElementById('mega-sena');
+    btnMegaSena.addEventListener('click', megaSena);
+
+    const btnQuina = document.getElementById('quina');
+    btnQuina.addEventListener('click', quina);
+
+    const btnLotomania = document.getElementById('lotomania');
+    btnLotomania.addEventListener('click', lotomania);
+
+    const btnTimemania = document.getElementById('timemania');
+    btnTimemania.addEventListener('click', timemania);
+
+    const btnDuplaSena = document.getElementById('dupla-sena');
+    btnDuplaSena.addEventListener('click', duplaSena);
+
+    const btnSuperSete = document.getElementById('super-sete');
+    btnSuperSete.addEventListener('click', superSete);
+
+    const btnDiaSorte = document.getElementById('dia-de-sorte');
+    btnDiaSorte.addEventListener('click', diaSorte);
 };
