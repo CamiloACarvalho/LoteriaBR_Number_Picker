@@ -54,3 +54,116 @@
     margin-right: auto;
     display: block;
 }
+
+#container-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.lotofacilNum{    
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(99, 3, 101);
+    border-radius: 50%;
+}
+
+.megaSenaNum{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(5, 107, 10);
+    border-radius: 50%;
+}
+
+.quinaNum{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(5, 20, 107);
+    border-radius: 50%;
+}
+
+.lotomaniaNum{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.timemaniaNum{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(199, 199, 10);
+    border-radius: 50%;
+}
+
+.duplaSenaNum{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(120, 0, 0);
+    border-radius: 50%;
+}
+
+.superSeteNum0,
+.superSeteNum1,
+.superSeteNum2,
+.superSeteNum3,
+.superSeteNum4,
+.superSeteNum5,
+.superSeteNum6{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(52, 255, 37);
+    border-radius: 50%;
+}
+
+.diaSorteNum{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.mes{
+    margin-top: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+    background-color: rgb(255, 255, 255, 0.8);
+
+}

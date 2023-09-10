@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 const limparNumeros = () => {
     const container = document.getElementById('container-numbers');
     // Remove todos os elementos filhos do container
@@ -5,6 +7,15 @@ const limparNumeros = () => {
         container.removeChild(container.firstChild);
     }
 };
+
+const backgroundChange = () => {
+    const random = Math.floor(Math.random() * 3) + 1;
+    let backgroundImage = `image/background0${random}.jpeg`
+    const background = document.createElement('img');
+    background.id = 'background';
+    background.src = backgroundImage;
+    body.appendChild(background);
+}
 
 const lotofacil = () => {
     limparNumeros();
@@ -171,11 +182,13 @@ const diaSorte = () => {
     const mes = document.createElement('span');
     const random = Math.floor(Math.random() * 12) + 1;
     mes.className = 'mes';
-    mes.innerText = `O mês da sorte: ${random}`;
+    mes.innerText = `Mês da sorte: ${random}`;
     container.appendChild(mes);
 };
 
 window.onload = () => {
+    backgroundChange();
+
     const btnLotofacil = document.getElementById('lotofacil');
     btnLotofacil.addEventListener('click', lotofacil);
 
