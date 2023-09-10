@@ -1,10 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 #background{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0%;
+    left: 0%;
     z-index: -1;
     width: 103%; 
     height: 103%;
-    object-fit: cover; 
+}
+#apresentation-box {
+    max-height: 200px;
+    background-color: rgba(255,255,255,0.8);
+    overflow-y: scroll;
+    border: 3px solid #ccc;
+    padding: 10px;
+    box-shadow: gray;
+}
+
+#welcome-text {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
 }
