@@ -3,14 +3,13 @@
     margin: 0;
 }
 
-#background{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-    width: auto; 
-    height: auto;
+html,body {
+    background: url(image/background02.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    z-index: -1;
 }
 
 #title{
@@ -56,6 +55,7 @@
 }
 
 #container-numbers {
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-wrap: wrap;
     width: 90%;
@@ -67,7 +67,7 @@
 .lotofacilNum{    
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin: 7px;
     text-align: center;
     font-size: 3rem;
     color: white;
@@ -78,7 +78,7 @@
 .megaSenaNum{
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin: 7px;
     text-align: center;
     font-size: 3rem;
     color: white;
@@ -89,7 +89,7 @@
 .quinaNum{
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin: 7px;
     text-align: center;
     font-size: 3rem;
     color: white;
@@ -100,7 +100,7 @@
 .lotomaniaNum{
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin: 7px;
     text-align: center;
     font-size: 3rem;
     color: white;
@@ -111,7 +111,7 @@
 .timemaniaNum{
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin: 7px;
     text-align: center;
     font-size: 3rem;
     color: white;
@@ -122,28 +122,11 @@
 .duplaSenaNum{
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin: 7px;
     text-align: center;
     font-size: 3rem;
     color: white;
     background-color: rgb(120, 0, 0);
-    border-radius: 50%;
-}
-
-.superSeteNum0,
-.superSeteNum1,
-.superSeteNum2,
-.superSeteNum3,
-.superSeteNum4,
-.superSeteNum5,
-.superSeteNum6{
-    width: 80px;
-    height: 80px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 3rem;
-    color: white;
-    background-color: rgb(52, 255, 37);
     border-radius: 50%;
 }
 
@@ -159,11 +142,16 @@
 }
 
 .mes{
-    margin-top: 5px;
+    margin: 7px;
     padding: 5px;
     text-align: center;
     font-size: 2.5rem;
     color: black;
     background-color: rgb(255, 255, 255, 0.8);
+}
 
+#check-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
