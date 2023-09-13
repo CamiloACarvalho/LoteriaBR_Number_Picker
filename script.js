@@ -8,14 +8,18 @@ const limparNumeros = () => {
     }
 };
 
-// const backgroundChange = () => {
-//     const random = Math.floor(Math.random() * 3) + 1;
-//     let backgroundImage = `image/background0${random}.jpeg`
-//     const background = document.createElement('img');
-//     background.id = 'background';
-//     background.src = backgroundImage;
-//     body.appendChild(background);
-// }
+const backgroundChange = () => {
+    const random = Math.floor(Math.random() * 3) + 1;
+    let backgroundImage = `image/background0${random}.jpeg`
+    const background = document.createElement('img');
+    document.body.appendChild(background);
+    document.body.style.background = `url(${backgroundImage})`;
+    document.body.style.background= 'noRepeate center center fixed'
+    document.body.style.mozBackgroundSize = 'cover';
+    document.body.style.oBackgroundSize = 'cover';
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.zIndex = '-1';
+}
 
 const lotofacil = () => {
     limparNumeros();
@@ -187,6 +191,8 @@ const diaSorte = () => {
 };
 
 window.onload = () => {
+
+    backgroundChange();
 
     const btnLotofacil = document.getElementById('lotofacil');
     btnLotofacil.addEventListener('click', lotofacil);
