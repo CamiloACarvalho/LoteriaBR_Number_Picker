@@ -146,8 +146,8 @@ const superSete = () => {
     const container = document.getElementById('container-numbers');
     const superSeteArray = [];
     for(let index = 0; index < 7; index +=1 ) {
-        const num = document.createElement('div');
-        num.id = `superSeteNum${index}`;
+        const colun = document.createElement('div');
+        colun.id = `superSeteNum${index}`;
         const superSete= new Set ();
         while(superSete.size < 7){
             const randomNumber = Math.floor(Math.random() * 10);
@@ -157,9 +157,9 @@ const superSete = () => {
         superSeteArray[index].sort(function (a, b) {
           return a - b;
         });
-        num.innerText = superSeteArray[index];
-        container.appendChild(num);   
+        container.appendChild(colun);
     }
+
 };
 
 const diaSorte = () => {
