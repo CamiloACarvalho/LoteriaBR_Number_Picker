@@ -144,22 +144,34 @@ const duplaSena = () => {
 const superSete = () => {
     limparNumeros();
     const container = document.getElementById('container-numbers');
-    const superSeteArray = [];
-    for(let index = 0; index < 7; index +=1 ) {
+
+    for (let colIndex = 0; colIndex < 7; colIndex++) {
         const colun = document.createElement('div');
-        colun.id = `superSeteNum${index}`;
-        const superSete= new Set ();
-        while(superSete.size < 7){
-            const randomNumber = Math.floor(Math.random() * 10);
+        colun.classList.add('superSeteCol');
+        colun.id = `superSeteNum${colIndex}`;
+        
+        const superSete = new Set();
+        while (superSete.size < 7) {
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
             superSete.add(randomNumber);
         }
-        superSeteArray[index] = Array.from(superSete);
-        superSeteArray[index].sort(function (a, b) {
-          return a - b;
-        });
+        
+        const sortedNumbers = Array.from(superSete).sort((a, b) => a - b);
+        
+        for (const number of sortedNumbers) {
+            const numberContainer = document.createElement('div');
+            numberContainer.classList.add('superSeteNumberContainer');
+            
+            const numberElement = document.createElement('div');
+            numberElement.classList.add('superSeteNumber');
+            numberElement.textContent = number;
+            
+            numberContainer.appendChild(numberElement);
+            colun.appendChild(numberContainer);
+        }
+
         container.appendChild(colun);
     }
-
 };
 
 const diaSorte = () => {
