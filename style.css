@@ -153,8 +153,12 @@
 
 #check-box{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+}
+
+button{
+    margin: 10px;
 }
 
 .superSeteCol {
@@ -178,4 +182,3 @@
     color: white;
     font-size: 2.5rem;
 }
-
