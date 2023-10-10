@@ -59,10 +59,9 @@
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 750px;
 }
 
 .lotofacilNum{    
@@ -134,7 +133,7 @@
 .diaSorteNum{
     width: 80px;
     height: 80px;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     font-size: 3rem;
     color: white;
@@ -144,11 +143,12 @@
 
 .mes{
     margin-top: 30px;
-    padding: 5px;
+    margin-bottom: 30px;
+    padding: 15px;
     text-align: center;
     font-size: 2.5rem;
-    color: black;
-    background-color: rgb(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
+    background-color: rgba(254, 170, 60, 0.8);
 }
 
 #check-box{
